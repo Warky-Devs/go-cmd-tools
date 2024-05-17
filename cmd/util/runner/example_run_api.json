@@ -1,0 +1,107 @@
+[
+  {
+    "description": "handlers.go - API template",
+    "cwd": "cmd/buildcore",
+    "name": "go",
+    "arguments": [
+      "run",
+      "gen.go",
+      "-models",
+      "../../internal/models",
+      "-template",
+      "./templates/handlers.tmpl",
+      "-destfile",
+      "../../internal/program/handlers.go",
+      "-tag",
+      "//:API:START",
+      "-endtag",
+      "//:API:END",
+      "-skipmodels",
+      "xmlbuffer,HubTypeMeta,hubtypemeta"
+    ]
+  },
+  {
+    "description": "routes.go - API template",
+    "cwd": "cmd/buildcore",
+    "name": "go",
+    "arguments": [
+      "run",
+      "gen.go",
+      "-models",
+      "../../internal/models",
+      "-template",
+      "./templates/routes-newapi.tmpl",
+      "-destfile",
+      "../../internal/program/routes.go",
+      "-tag",
+      "//:APIROUTE:START",
+      "-endtag",
+      "//:APIROUTE:END",
+      "-skipmodels",
+      "xmlbuffer,HubTypeMeta,hubtypemeta"
+    ]
+  },
+  {
+    "description": "model_types.go - API template",
+    "cwd": "cmd/buildcore",
+    "name": "go",
+    "arguments": [
+      "run",
+      "gen.go",
+      "-models",
+      "../../internal/models",
+      "-template",
+      "./templates/routes-modeltype.tmpl",
+      "-destfile",
+      "../../internal/program/model_types.go",
+      "-tag",
+      "//:FUNC MODELTYPE BEGIN",
+      "-endtag",
+      "//:FUNC MODELTYPE END",
+      "-skipmodels",
+      "xmlbuffer,HubTypeMeta,hubtypemeta"
+    ]
+  },
+  {
+    "description": "DBBuffers.ts (Typescript) - API template",
+    "cwd": "cmd/buildcore",
+    "name": "go",
+    "arguments": [
+      "run",
+      "gen.go",
+      "-models",
+      "../../internal/models",
+      "-template",
+      "./templates/TypeScriptModels.tmpl",
+      "-destfile",
+      "../../frontend/models/src/generated.ts",
+      "-tag",
+      "//:START",
+      "-endtag",
+      "//:END",
+      "-skipmodels",
+      "xmlbuffer,HubTypeMeta,hubtypemeta"
+    ]
+  },
+  {
+    "description": "(Typescript) - API template",
+    "cwd": "cmd/buildcore",
+    "name": "go",
+    "arguments": [
+      "run",
+      "gen.go",
+      "-models",
+      "../../internal/models",
+      "-template",
+      "./templates/TypeScriptNewModels.tmpl",
+      "-destfile",
+      "../../frontend/models/src/models.ts",
+      "-tag",
+      "//:START",
+      "-endtag",
+      "//:END",
+      "-skipmodels",
+      "xmlbuffer,HubTypeMeta,hubtypemeta"
+    ]
+  }
+]
