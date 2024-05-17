@@ -10,7 +10,7 @@ on:
 jobs:
   linux:
     name: "Build on Linux"
-    runs-on: [self-hosted, linux]
+    runs-on: [linux]
     steps:
       - uses: actions/checkout@v3
 
@@ -32,7 +32,7 @@ jobs:
 
   windows:
     name: "Build on Windows"
-    runs-on: [self-hosted, windows]
+    runs-on: [windows]
     steps:
       - uses: actions/checkout@v3
 
